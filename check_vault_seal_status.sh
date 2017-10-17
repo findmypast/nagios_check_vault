@@ -6,9 +6,9 @@
 # - Vault is using https with a valid certificate
 
 # The hostname of the vault server that we're supposed to check.
-# Example value: https://localhost:8200
+# Default value: https://localhost:8200
 
-address=$1
+address=${1:-"https://localhost:8200"}
 
 if [ -z "$address" ] ; then
     echo "Usage: check_vault_seal vault_server_hostname"
